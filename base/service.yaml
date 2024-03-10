@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nodejs-app
+  name: go-app
 spec:
   selector:
-    app: nodejs-app
+    app: go-app
   ports:
   - name: http
     port: 3000
