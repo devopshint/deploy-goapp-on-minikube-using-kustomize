@@ -1,17 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nodejs-app
+  name: go-app
 spec:
-  replicas: 2 # Update the replica count to 2
+  replicas: 2 # Update the replica count to 2 for dev env
   template:
     spec:
       containers:
-      - name: nodejs-app
-        resources:
-          limits:
-            cpu: "300" # Lower CPU limit to 200m (0.2 CPU cores)
-            memory: "500Mi" # Lower memory limit to 256 MiB
-          requests:
-            cpu: "200" # Lower CPU request to 100m (0.1 CPU cores)
-            memory: "256Mi"
+      - name: go-app
